@@ -16,12 +16,12 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial';
-            scroll-behavior: smooth;
+            font-family: Arial;
+            scroll-behavior: smooth
         }
 
         body {
-            background: #f4f4f4;
+            background: #f4f4f4
         }
 
         header {
@@ -58,7 +58,7 @@
         }
 
         .banner h1 {
-            font-size: 40px;
+            font-size: clamp(28px, 5vw, 40px);
             margin-bottom: 10px
         }
 
@@ -109,7 +109,7 @@
         }
 
         .preco {
-            font-size: 40px;
+            font-size: 30px;
             color: var(--laranja);
             font-weight: bold;
             margin: 10px 0
@@ -130,8 +130,16 @@
 
         .site img {
             width: 100%;
-            height: 200px;
-            object-fit: cover
+            height: 220px;
+            object-fit: cover;
+            background: #ddd;
+            display: block
+        }
+
+        .site h3 {
+            padding: 15px;
+            text-align: center;
+            color: var(--azul)
         }
 
         .contacto {
@@ -143,12 +151,13 @@
 
         .contacto a {
             color: var(--verde);
-            font-size: 24px;
+            font-size: 20px;
             text-decoration: none;
-            font-weight: bold
+            font-weight: bold;
+            display: block;
+            margin: 10px 0
         }
 
-        /* LOGIN E PAINEL */
         .card {
             background: white;
             padding: 25px;
@@ -167,7 +176,7 @@
         }
 
         #painelVisitas {
-            display: none;
+            display: none
         }
 
         #painelVisitas table {
@@ -190,6 +199,15 @@
             .portfolio {
                 grid-template-columns: 1fr
             }
+
+            nav {
+                flex-direction: column;
+                gap: 10px
+            }
+
+            .banner {
+                padding: 120px 20px 60px
+            }
         }
     </style>
 </head>
@@ -197,12 +215,12 @@
 <body>
     <header>
         <nav>
-            <h3>Seu Nome Sites</h3>
+            <h3> MárioSites</h3>
             <div>
                 <a href="#precos">Preços</a>
                 <a href="#portfolio">Portfólio</a>
                 <a href="#contacto">Contacto</a>
-                <a onclick="mostrarLogin()">Painel Admin</a>
+                <a onclick="mostrarLogin()">Admin</a>
             </div>
         </nav>
     </header>
@@ -210,7 +228,8 @@
     <section class="banner">
         <h1>Criação de Sites Profissionais</h1>
         <p>Transformo a tua ideia em um site que vende. Rápido, Bonito e no Celular.</p>
-        <a href="https://wa.me/258856355027" class="btn btn-whats">FAÇA UM ORÇAMENTO NO WHATSAPP</a>
+        <a href="https://wa.me/258856355027?text=Olá!%20Quero%20um%20orçamento%20para%20site" target="_blank"
+            class="btn btn-whats">FAÇA UM ORÇAMENTO NO WHATSAPP</a>
     </section>
 
     <section id="precos" class="container">
@@ -218,18 +237,21 @@
         <div class="precos">
             <div class="pacote">
                 <h3>BÁSICO</h3>
-                <div class="preco">3.000 MT - 10.000MT</div>
-                <p>1 Página + WhatsApp</p><a href="https://wa.me/258856355027" class="btn">Pedir</a>
+                <div class="preco">3.000 MT - 8.000 MT</div>
+                <p>1 Página + WhatsApp</p><a href="https://wa.me/258856355027?text=Quero%20o%20Pacote%20BÁSICO"
+                    target="_blank" class="btn">Pedir</a>
             </div>
             <div class="pacote" style="border-top:5px solid var(--verde)">
                 <h3>PROFISSIONAL</h3>
-                <div class="preco">12.000 MT - 15.000 MT</div>
-                <p>5 Páginas + Sistema</p><a href="https://wa.me/258856355027" class="btn">Pedir</a>
+                <div class="preco">12.000 MT - 25.000 MT</div>
+                <p>5 Páginas + Sistema</p><a href="https://wa.me/258856355027?text=Quero%20o%20Pacote%20PROFISSIONAL"
+                    target="_blank" class="btn">Pedir</a>
             </div>
             <div class="pacote">
                 <h3>LOJA VIRTUAL</h3>
-                <div class="preco">14.000 MT - 25.000 MT</div>
-                <p>Loja + Pagamento</p><a href="https://wa.me/258856355027" class="btn">Pedir</a>
+                <div class="preco">15.000 MT - 50.000 MT</div>
+                <p>Loja + Pagamento</p><a href="https://wa.me/258856355027?text=Quero%20uma%20LOJA%20VIRTUAL"
+                    target="_blank" class="btn">Pedir</a>
             </div>
         </div>
     </section>
@@ -237,61 +259,48 @@
     <section id="portfolio" class="container">
         <h2>ALGUNS TRABALHOS</h2>
         <div class="portfolio">
-            <div class="site"><img src="imagem/FT2.png">
-                <div>
-                    <h3>Centro Nhandza</h3>
-                </div>
+            <div class="site"><img src="imagem/FT2.png" alt="Centro Nhandza">
+                <h3>Centro Nhandza</h3>
             </div>
-            <div class="site"><img src="imagem/Ca.png">
-                <div>
-                    <h3>Loja Onhile</h3>
-                </div>
+            <div class="site"><img src="imagem/Ca.png" alt="Loja Onhile">
+                <h3>Centro Mário</h3>
             </div>
-            <div class="site"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80">
-                <div>
-                    <h3>Landing Page</h3>
-                </div>
+            <div class="site"><img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80"
+                    alt="Landing">
+                <h3>Landing Page</h3>
             </div>
-            <div class="site"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80">
-                <div>
-                    <h3>Site de Empresa</h3>
-                </div>
+            <div class="site"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80"
+                    alt="Empresa">
+                <h3>Site de Empresa</h3>
             </div>
-            <div class="site"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80">
-                <div>
-                    <h3>Restaurante</h3>
-                </div>
+            <div class="site"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80"
+                    alt="Restaurante">
+                <h3>Restaurante</h3>
             </div>
-            <div class="site"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80">
-                <div>
-                    <h3>Portfólio Pessoal</h3>
-                </div>
+            <div class="site"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80" alt="Portfolio">
+                <h3>Portfólio Pessoal</h3>
             </div>
         </div>
     </section>
 
     <section id="contacto" class="contacto">
         <h2>VAMOS CRIAR TEU SITE?</h2>
-        <p>Chama agora mesmo</p>
-        <p><a href="tel:856355027">📞 CHAMADA: 856355027 / 878784563</a></p>
-        <p><a href="https://wa.me/258856355027">💬 WHATSAPP: 856355027</a></p>
+        <a href="tel:+258856355027">📞 856355027 / 878784563</a>
+        <a href="https://wa.me/258856355027" target="_blank">💬 WHATSAPP: 856355027</a><br></br><br></br><br></br>
+        <p style="text-align-last: center;color: black;;">Maputo Chamanculo</p>
     </section>
 
-    <!-- TELA DE LOGIN SÓ PRA TI -->
     <div id="loginAdmin" class="container" style="display:none">
         <div class="card">
             <h2>Acesso Restrito</h2>
-            <p>Área do Administrador</p>
             <input type="password" id="senhaAdmin" placeholder="Digite a Senha Mestra">
             <button class="btn" onclick="fazerLogin()">ENTRAR</button>
-            <p id="erroLogin" style="color:red; text-align:center"></p>
+            <p id="erroLogin" style="color:red;text-align:center"></p>
         </div>
     </div>
 
-    <!-- PAINEL SECRETO DE VISITAS -->
     <div id="painelVisitas" class="container">
         <h2>Painel de Visitas</h2>
-        <p>Bem-vindo chefe! Aqui estão as visitas do teu site.</p>
         <button class="btn" onclick="limparVisitas()">Limpar Histórico</button>
         <button class="btn" style="background:#6c757d" onclick="sair()">SAIR</button>
         <table>
@@ -307,26 +316,17 @@
     </div>
 
     <script>
-        // SENHA MESTRA - SÓ TU SABES. MUDA AQUI
         const SENHA_MESTRA = "Gatinho21";
-
         function guardarVisita() {
             let visitas = JSON.parse(localStorage.getItem('visitasMeuSite')) || [];
-            visitas.push({
-                data: new Date().toLocaleString('pt-BR'),
-                pagina: window.location.hash || "Home",
-                dispositivo: navigator.userAgent
-            });
+            visitas.push({ data: new Date().toLocaleString('pt-MZ'), pagina: window.location.hash || "Home", dispositivo: navigator.userAgent });
             localStorage.setItem('visitasMeuSite', JSON.stringify(visitas));
         }
-
         function mostrarLogin() {
             document.getElementById('loginAdmin').style.display = "block";
             document.getElementById('painelVisitas').style.display = "none";
             window.scrollTo(0, document.body.scrollHeight);
         }
-
-        // IF: FAZER LOGIN COM 1 SENHA SÓ
         function fazerLogin() {
             let senha = document.getElementById('senhaAdmin').value;
             if (senha == SENHA_MESTRA) {
@@ -337,11 +337,25 @@
                 document.getElementById('erroLogin').innerText = "Senha incorreta!";
             }
         }
-
         function sair() {
             document.getElementById('painelVisitas').style.display = "none";
+            document.getElementById('loginAdmin').style.display = "none";
+            document.getElementById('senhaAdmin').value = "";
+            document.getElementById('erroLogin').innerText = "";
         }
 
+        function fazerLogin() {
+            let s = document.getElementById('senhaAdmin').value;
+            if (s == SENHA_MESTRA) {
+                document.getElementById('loginAdmin').style.display = "none";
+                document.getElementById('painelVisitas').style.display = "block";
+                document.getElementById('senhaAdmin').value = ""; // LIMPA SENHA
+                carregarVisitas();
+            } else {
+                document.getElementById('erroLogin').innerText = "Senha incorreta!";
+                document.getElementById('senhaAdmin').value = "";
+            }
+        }
         function carregarVisitas() {
             let visitas = JSON.parse(localStorage.getItem('visitasMeuSite')) || [];
             let html = "";
@@ -350,14 +364,7 @@
             });
             document.getElementById('listaVisitas').innerHTML = html || "<tr><td colspan=3>Nenhuma visita ainda</td></tr>";
         }
-
-        function limparVisitas() {
-            if (confirm("Apagar todo histórico?")) {
-                localStorage.removeItem('visitasMeuSite');
-                carregarVisitas();
-            }
-        }
-
+        function limparVisitas() { if (confirm("Apagar todo histórico?")) { localStorage.removeItem('visitasMeuSite'); carregarVisitas() } }
         guardarVisita();
     </script>
 </body>
